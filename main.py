@@ -292,12 +292,12 @@ if __name__ == "__main__":
     parser.add_argument("--action_space", default="Continuous")               # Sets Gym, PyTorch and Numpy seeds
     parser.add_argument("--goal_in_observations", action = "store_false")     # Sets Gym, PyTorch and Numpy seeds
     
-    parser.add_argument("--policy", default="AWAC_Q_lambda_Peng") # Policy name (TD3, DDPG or OurDDPG)
+    parser.add_argument("--policy", default="AWAC") # Policy name (TD3, DDPG or OurDDPG)
     parser.add_argument("--Entropy", action="store_false") # Policy name (TD3, DDPG or OurDDPG)
     parser.add_argument("--seed", default=0, type=int)    # Sets Gym, PyTorch and Numpy seeds
     parser.add_argument("--number_steps_per_iter", default=110, type=int) # Time steps initial random policy is used 25e3
     parser.add_argument("--eval_freq", default=1, type=int)          # How often (time steps) we evaluate
-    parser.add_argument("--max_iter", default=20, type=int)    # Max time steps to run environment
+    parser.add_argument("--max_iter", default=200, type=int)    # Max time steps to run environment
     # HRL
     parser.add_argument("--start_timesteps", default=25e3, type=int) # Time steps before training default=25e3
     parser.add_argument("--expl_noise", default=0.1)                 # Std of Gaussian exploration noise    

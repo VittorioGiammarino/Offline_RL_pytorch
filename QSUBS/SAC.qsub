@@ -1,0 +1,19 @@
+#!/bin/bash -l
+
+#$ -l h_rt=172:00:00
+
+#$ -m e
+
+#$ -j y
+
+#$ -N offline_RL_SAC_maze2d-large-v1
+
+#$ -V
+
+#$ -pe omp 4
+#$ -l mem_per_core=4G
+
+module load miniconda
+
+conda activate /project/onr/vgiammar/RL_env
+python main.py --policy SAC --env maze2d-large-v1 --env_reward_type Sparse --seed $1

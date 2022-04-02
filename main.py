@@ -293,7 +293,7 @@ if __name__ == "__main__":
     parser.add_argument("--goal_in_observations", action = "store_false")     # Sets Gym, PyTorch and Numpy seeds
     
     parser.add_argument("--policy", default="AWAC") # Policy name (TD3, DDPG or OurDDPG)
-    parser.add_argument("--Entropy", action="store_false") # Policy name (TD3, DDPG or OurDDPG)
+    parser.add_argument("--Entropy", action="store_true") # Policy name (TD3, DDPG or OurDDPG)
     parser.add_argument("--seed", default=0, type=int)    # Sets Gym, PyTorch and Numpy seeds
     parser.add_argument("--number_steps_per_iter", default=110, type=int) # Time steps initial random policy is used 25e3
     parser.add_argument("--eval_freq", default=1, type=int)          # How often (time steps) we evaluate

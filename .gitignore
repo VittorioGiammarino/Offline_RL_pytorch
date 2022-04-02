@@ -1,2 +1,4 @@
 models/offline_RL/**
 __pycache__/**
+log_files/**
+results/**

@@ -53,7 +53,10 @@ class AWAC_Q_lambda(object):
         
         self.Entropy = Entropy
         self.target_entropy = -torch.FloatTensor([action_dim]).to(device)
-        self.log_alpha = torch.zeros(1, requires_grad=True, device="cuda")
+        try:
+            self.log_alpha = torch.zeros(1, requires_grad=True, device="cuda")
+        except:
+            self.log_alpha = torch.zeros(1, requires_grad=True)
         self.alpha_optim = torch.optim.Adam([self.log_alpha], lr = l_rate_alpha) 
         self.alpha = alpha
 
